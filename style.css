@@ -1,0 +1,163 @@
+body {
+  background: url(./Graphics/Symbol\ 3\ copy.png) no-repeat;
+  background-size: cover;
+}
+
+.main{
+  border-color: 10px solid  aquamarine;
+}
+.pump-container {
+      position: absolute;
+      bottom: 2px;
+      right: 1px;
+      width: 2px;
+      height: 1px;
+      border-color: 2px solid black;
+      cursor: pointer;
+    }
+
+    .pump-body {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      height: 100px;
+      -webkit-animation: shake 0.3s ease-in-out; /* Vendor prefixes for animation property */
+      animation: shake 0.3s ease-in-out;
+    }
+
+    .pump-handle {
+      position: absolute;
+      bottom: 70px;
+      right: 10px;
+      height: 100px;
+      transition: transform 0.3s ease;
+    }
+
+    .pump-handle.clicked {
+      transform: translateY(10px);
+    }
+
+    .wind-pipe {
+      position: absolute;
+      height: 100px;
+      bottom: 40px;
+      right: 70px;
+    }
+    .tail-class{
+      width: 100px; /* Adjust the width as per your requirement */
+      height: 150px; /* Automatically adjust the height while maintaining aspect ratio */
+      position: absolute;
+     
+      bottom: 35px; /* Adjust the top position as per your requirement */
+      right: 100px; 
+    }
+
+
+    .image-class {
+      width: 100px; /* Adjust the width as per your requirement */
+      height: 20px; /* Automatically adjust the height while maintaining aspect ratio */
+      position: absolute;
+     
+      bottom: 120px; /* Adjust the top position as per your requirement */
+      right: 100px; /* Adjust the left position as per your requirement */
+    }
+
+    .letter-image-class{
+      width: 100px; /* Adjust the width as per your requirement */
+      height: 20px; /* Automatically adjust the height while maintaining aspect ratio */
+      position: absolute;
+     
+      bottom: 120px; /* Adjust the top position as per your requirement */
+      right: 100px;
+    }
+    
+
+    @keyframes shake {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+  }
+
+.shaking {
+  animation: shake 0.1s;
+  display: none
+}
+
+.cloud{
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 200px;
+  height: 100px;
+
+}
+
+@keyframes roam {
+ 
+    0% {
+      bottom: 120px;
+      right: 100px;
+    }
+    25% {
+      bottom: calc(50vh - 50px);
+      right: calc(50vw - 50px);
+    }
+    50% {
+      bottom: calc(100vh - 110px);
+      right: calc(100vw - 110px);
+    }
+    75% {
+      bottom: calc(50vh - 50px);
+      right: calc(50vw - 50px);
+    }
+    100% {
+      bottom: 10%;
+      right: 10%;
+    }
+  }
+  
+
+
+@keyframes roamTail {
+  0% {
+    bottom: 35px;
+    right: 100px;
+  }
+  25% {
+    bottom: calc(50vh - 50px);
+    right: calc(50vw - 50px);
+  }
+  50% {
+    bottom: calc(100vh - 110px);
+    right: calc(100vw - 110px);
+  }
+  75% {
+    bottom: calc(50vh - 50px);
+    right: calc(50vw - 50px);
+  }
+  100% {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.shrink-animation {
+  animation-name: shrink;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
